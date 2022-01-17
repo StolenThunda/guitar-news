@@ -4,6 +4,7 @@ import axios from 'axios'
 import cheerio from 'cheerio'
 import express from 'express'
 import News from './news/index.js'
+const port = process.env.PORT || 5000
 const app = express()
 const NewsSources = Object.values(News)
 // console.log('SRCS: ', NewsSources)
@@ -45,7 +46,7 @@ for ( const source of NewsSources ) {
 }
 
 console.log( '... Finished Loading articles' )
-app.listen( process.env.PORT || 5000, () => console.log( 'listening on port ' + port ) )
+app.listen( port, () => console.log( 'listening on port ' + port ) )
 
 
 //#region 

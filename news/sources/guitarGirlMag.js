@@ -1,6 +1,7 @@
 function GuitarGirlMagSource() {
     this.name = 'guitarGirlMag'
-    this.address = 'http://guitarGirlMag.com'
+  this.address = 'http://guitarGirlMag.com'
+  this.proper = 'Guitar Girl Magazine'
     this.articles = []
   this.getArticles = ( $ ) => {
     const articles = []
@@ -11,7 +12,8 @@ function GuitarGirlMagSource() {
       const url = $( this ).attr( 'href' )
         articles.push( {
           title, url,
-          source: name
+          sourceID: name,
+          proper: this.proper
         } )
         
     } )
