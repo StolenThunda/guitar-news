@@ -13,8 +13,8 @@
     "axios": "^0.24.0",
     "cheerio": "^1.0.0-rc.10",
     "express": "^4.17.2",
-    "implement-js": "^0.0.31",
     "lodash": "^4.17.21",
-    "nodemon": "^2.0.15"
+    "nodemon": "^2.0.15",
+    "require-context": "^1.1.0"
   }
 }

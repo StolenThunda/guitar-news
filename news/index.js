@@ -1,4 +1,5 @@
-import Sources from "./sources/index.js";
+import * as NewsCompilation from "./sources/index.js";
 
-const News = Sources
-export default News;
+const News = NewsCompilation.default
+// console.log('News',News)
+export default News
