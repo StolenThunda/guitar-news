@@ -1,6 +1,7 @@
 function GuitarWorldSource() {
     this.name = 'guitarWorld'
-    this.address = 'http://guitarworld.com'
+  this.address = 'http://guitarworld.com'
+  this.proper = 'Guitar World'
     this.articles = []
   this.getArticles = ( $ ) => {
     const articles = []
@@ -11,7 +12,7 @@ function GuitarWorldSource() {
       const url = $( this ).attr( 'href' )
         articles.push( {
           title, url,
-          source: name
+          sourceID: name, proper: this.proper
         } )
         
     } )

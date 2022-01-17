@@ -1,7 +1,8 @@
 // import NewsSourceInterface from '../SourceInterface.js'
 // import NewsSourceInterface from '../SourceInterface.js'
 function AcousticGuitarSource() {
-    this.name = 'acousticGuitar'
+  this.name = 'acousticGuitar'
+  this.proper = 'Acoustic Guitar'
     this.address = 'http://acousticguitar.com'
     // this.articles = []
   this.getArticles = ( $ ) => {
@@ -14,7 +15,7 @@ function AcousticGuitarSource() {
         // if ( title.includes( 'Acoustic' ) ) {
         const url = $( this ).attr( 'href' )
         articles.push( {
-          title, url, source: name
+          title, url, sourceID: name, proper: this.proper
         } )
         
       } )
