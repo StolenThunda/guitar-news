@@ -1,4 +1,4 @@
-const port = 6900
+const port = 80
 import axios from 'axios'
 import cheerio from 'cheerio'
 import express from 'express'
