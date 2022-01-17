@@ -9,6 +9,11 @@ export default {
   GuitarPlayer, 
   GuitarGirlMag
 }
+
+// TODO: Refactor this for autoloading source directory!!!
+
+//#region Autoloading attempt
+
 // import requireContext from "require-context";
 // const path = "../../news/sources"
 // const requireSource = requireContext( path, false, /\.js$/ ); //extract js files inside Sources folder
@@ -41,3 +46,5 @@ export default {
 // // }
 // console.log( 'Sources', Sources )
 // export default Sources;
+
+//#endregion

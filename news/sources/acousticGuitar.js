@@ -1,13 +1,12 @@
-// import NewsSourceInterface from '../SourceInterface.js'
-// import NewsSourceInterface from '../SourceInterface.js'
-function AcousticGuitarSource() {
-  this.name = 'acousticGuitar'
-  this.proper = 'Acoustic Guitar'
-    this.address = 'http://acousticguitar.com'
-    // this.articles = []
-  this.getArticles = ( $ ) => {
-    const articles = []
-    const name = this.name
+import NewSource from "../NewSource.js";
+class AcousticGuitarSource extends NewSource {
+  constructor( defaults ) {
+    super( defaults )
+  }
+  getArticles( $ )  {
+      const articles = []
+      const sourceID = this.sourceID
+      const name = this.proper
       const tags = $( 'div.cb-article-meta  a, .cb-post-title a' )
       tags?.each( function () {
         const title = $( this ).text()
@@ -15,13 +14,20 @@ function AcousticGuitarSource() {
         // if ( title.includes( 'Acoustic' ) ) {
         const url = $( this ).attr( 'href' )
         articles.push( {
-          title, url, sourceID: name, proper: this.proper
+          title, url, sourceID, name
         } )
-        
+
       } )
       this.articles = articles
       return this.articles
     }
+  
 }
-const AcousticGuitar =  new AcousticGuitarSource()
+
+
+const AcousticGuitar = new AcousticGuitarSource( {
+  sourceID: 'acousticGuitar',
+  proper: 'Acoustic Guitar',
+  address: 'http://acousticguitar.com'
+})
 export default AcousticGuitar
