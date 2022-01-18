@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta
+      http-equiv="X-UA-Compatible"
+      content="IE=edge"
+    >
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    >
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Guitar Haven</title>
+  </head>
+
+  <body class=" bg-slate-300">
+    <div class=" font-sans">
+      <div class="flex flex-center p-2">
+        <div class="flex-none w-56 relative">
+        <img
+          src="https://rapidapi.com/cdn/images?url=https://rapidapi-prod-apis.s3.amazonaws.com/8db7310d-8661-491b-b4e9-562b5ef275b1.png"
+          class="absolute inset-0 w-full h-full object-cover rounded-lg"
+        />
+      </div>
+      <form class="flex-auto p-6">
+        <div class="flex flex-wrap">
+          <h1 class="flex-auto font-medium text-slate-900">
+            Welcome to Guitar Haven
+          </h1>
+        </div>
+        <p class="text-sm text-slate-500 mt-4 mb-2 pb-2 border-t border-slate-200">
+          Guitar News Aggregation Service
+        </p>
+        <div>
+          <p class="flex-auto font-medium text-slate-900">Current Magazines </p>
+          <ul>
+            <li>Acoustic Guitar <span>(http://acousticguitar.com)</span></li>
+            <li>Guitar World</li>
+            <li>Guitar Player</li>
+            <li>Guitar Girl Mag</li>
+          </ul>
+        </div>
+        <div>
+          <p class="text-sm text-slate-500 mt-4 mb-2 pb-2 ">
+            <p class="flex-auto font-medium text-slate-900 border-b">API Endpoints</p>
+          <ul class="text-blue">
+            <li><a href="/news">All News - ( /news )</a></li>
+            <li><a href="/sourceIDs"> Source IDs - ( /sourceIDs )</a></li>
+            <li>News by Source ( /news/:sourceID )</li>
+            <li><a href="/sources">All source info ( /sources )</a></li>
+            <li><a href="/sources/:sourceID">Source Info by sourceID ( /sources/:sourceID ) TODO!!</a></li>
+          </ul>
+        </p>
+        </div>
+      </form>
+    </div>
+      </div>
+      
+    </div>
+  </body>
+
+</html>

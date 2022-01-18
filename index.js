@@ -2,19 +2,25 @@ import 'dotenv/config'
 import express from 'express'
 import News from './news/index.js'
 import path from "path"
+// import consign from 'consign'
 
 const __dirname = path.resolve();
-const port = process.env.PORT || 5000
+const port = process.env.PORT || 5500
 const app = express()
 const NewsSources = News.NewsSources
 
-// console.log('SRCS: ', NewsSources)
+// consign({cwd: 'news'})
+//   .include( 'sources' )
+//   .into( app )
+  
+// console.log('autoload: ', app.news.sources)
+
 var articles = []
 
 //#region routes
 app.get( '/', ( _req, res ) => {
   // res.json( "Welcome to GuitarHaven" )
-  res.sendFile(__dirname + '/index.html');
+  res.sendFile(__dirname + '/src/index.html');
 } )
 
 app.get( '/sources', ( _req, res ) => {
