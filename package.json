@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "description": "Aggregation of guitar articles from top guitar magizines",
   "main": "index.js",
-  "type": "module",
   "scripts": {
     "start": "node index.js",
-    "dev": "nodemon index.js ./src/index.html"
+    "dev": "npx nodemon --delay 500ms ./**/*.{html,js}",
+    "force": "pkill -f nodemon && npm run dev"
   },
   "author": "Antonio Moses",
   "license": "ISC",
