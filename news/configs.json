@@ -1,0 +1,49 @@
+[
+  {
+    "sourceID": "guitar_com",
+    "proper": "Guitar.com",
+    "address": "http://guitar.com",
+    "searchTags": [
+      "[rel=bookmark]"
+    ],
+    "title": "title"
+  },
+  {
+    "sourceID": "guitarPlayer",
+    "address": "http://guitarPlayer.com",
+    "proper": "Guitar Player",
+    "searchTags": [
+      ".article-link"
+    ],
+    "title": "aria-label"
+  },
+  {
+    "sourceID": "acousticGuitar",
+    "proper": "Acoustic Guitar",
+    "address": "http://acousticguitar.com",
+    "searchTags": [
+      "div.cb-article-meta  a, .cb-post-title a"
+    ],
+    "trim": true,
+    "isText": true
+  },
+  {
+    "sourceID": "guitarGirlMag",
+    "address": "http://guitarGirlMag.com",
+    "proper": "Guitar Girl Magazine",
+    "searchTags": [
+      ".entry-title a"
+    ],
+    "title": "title"
+  },
+  {
+    "sourceID": "guitarWorld",
+    "address": "http://guitarworld.com",
+    "proper": "Guitar World",
+    "searchTags": [
+      ".article-link"
+    ],
+    "trim": true,
+    "isText": true
+  }
+]
