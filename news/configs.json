@@ -45,5 +45,22 @@
     ],
     "trim": true,
     "isText": true
+  },{
+  
+    "sourceID": "guitarWorldBass",
+    "address": "http://guitarworld.com/bass-player",
+    "proper": "Guitar World (Bass)",
+    "searchTags": [
+      ".article-link"
+    ],
+    "title" : "aria-label"
+  },{
+    "sourceID": "premierGuitar",
+    "address": "https://www.premierguitar.com/",
+    "proper": "Premier Guitar",
+    "searchTags" : [
+      ".widget__headline a"
+    ], 
+    "title": "aria-label"
   }
 ]

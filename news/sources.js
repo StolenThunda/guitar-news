@@ -56,7 +56,7 @@ const NewsSource = class {
 
     // remove duplicates
     const jsonObjec = articles.map( JSON.stringify ) // turn array of objects into string
-    console.log( jsonObjec )
+    // console.log( jsonObjec )
     const uniSet = new Set( jsonObjec ) // creates unique set
     
     this.articles = Array.from(uniSet).map(JSON.parse ) // creates an array from set
