@@ -17,7 +17,6 @@ const NewsSource = class {
     this.isText = defaults?.isText || false
     this.trim = defaults?.trim || false
     this.articles = []
-
     return this
   }
   /**
@@ -54,8 +53,13 @@ const NewsSource = class {
         name
       } )
     } )
-    // console.log(this.name, articles[0])
-    this.articles = articles
+
+    // remove duplicates
+    const jsonObjec = articles.map( JSON.stringify ) // turn array of objects into string
+    console.log( jsonObjec )
+    const uniSet = new Set( jsonObjec ) // creates unique set
+    
+    this.articles = Array.from(uniSet).map(JSON.parse ) // creates an array from set
     return this.articles
   }
 }

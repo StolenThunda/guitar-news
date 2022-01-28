@@ -159,6 +159,20 @@ app.get( '/sourcesWithDetail/:sourceID', ( req, res ) => {
 app.get( '/_all', ( _req, res ) => {
   res.json( NewsCompilation )
 } )
+
+app.get( '/api', ( req, res ) => {
+  const routes = []
+  app._router.stack.forEach( ( r ) => {
+    const objRoute = {}
+    if ( r?.route?.path ) {
+      objRoute['path'] = r.route.path
+      if ( r?.keys.length ) objRoute['params'] = r.keys
+      routes.push( objRoute )
+    }  
+  })
+  res.json( routes )
+  // res.json(app._router.stack)
+})
 //#endregion routes
 
 main()
