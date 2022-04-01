@@ -11,12 +11,28 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0"
     >
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
     <title>Guitar Haven</title>
+    <style>
+      a, .linkALike {
+        text-decoration: none;
+        color: black;
+        cursor: pointer;
+        
+      }
+      a:hover, .linkALike:hover {
+        text-decoration: underline;
+        color: blue;
+      }
+    </style>
+    <script defer type="module">
+      import { userRequest } from './lib.js'
+      console.log(userRequest)
+    </script>
   </head>
 
   <body class=" bg-slate-300">
-    <div class=" font-sans">
+    <div class=" font-sans container w-1/2">
       <div class="flex flex-center p-2">
         <div class="flex-none w-56 relative">
         <img
@@ -49,7 +65,7 @@
           <ul class="text-blue">
             <li><a href="/news">All News - ( /news )</a></li>
             <li><a href="/sourceIDs"> Source IDs - ( /sourceIDs )</a></li>
-            <li>News by Source ( /news/:sourceID )</li>
+            <li><span class="linkALike" onclick="userRequest('news', 'sourceID')">News by Source ( /news/:sourceID )</span></li>
             <li><a href="/sources">All source info ( /sources )</a></li>
             <li><a href="/sources/:sourceID">Source Info by sourceID ( /sources/:sourceID ) TODO!!</a></li>
           </ul>
@@ -61,5 +77,5 @@
       
     </div>
   </body>
-
+ 
 </html>

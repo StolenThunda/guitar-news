@@ -10,13 +10,15 @@ const cheerio = require( "cheerio" )
   try {
     return axios.get( source.address )
       .then( ( response ) => {
-        console.log( `Loading (${source.proper}) Data from ${source.address}` )
-        const html = response.data
+        // console.log( `Loading (${source.proper}) Data from ${source.address}` )
+        const html = response.data;
         try {
-          const src_articles = source.getArticles( html )
-          console.log( 'gather articles: ', src_articles.length )
-          return src_articles
-        } catch ( e ) { console.log( e ) }
+          const src_articles = source.getArticles(html);
+          console.log("gather articles: ", src_articles.length);
+          return src_articles;
+        } catch (e) {
+          console.log(e);
+        }
       } )
   } catch ( e ) { console.log( e ) }
 }
