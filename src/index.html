@@ -25,9 +25,14 @@
         color: blue;
       }
     </style>
-    <script defer type="module">
-      import { userRequest } from './lib.js'
-      console.log(userRequest)
+    <script>
+      const userRequest = ( base, ...vars ) => {
+          let variable = prompt( `Please enter ${vars[0]}` )
+          console.log( base, variable )
+          let loc = window.location
+          loc.replace( `${loc.origin}/${base}/${variable}` )
+          console.log( window.location )
+        }
     </script>
   </head>
 
@@ -65,7 +70,10 @@
           <ul class="text-blue">
             <li><a href="/news">All News - ( /news )</a></li>
             <li><a href="/sourceIDs"> Source IDs - ( /sourceIDs )</a></li>
-            <li><span class="linkALike" onclick="userRequest('news', 'sourceID')">News by Source ( /news/:sourceID )</span></li>
+            <li><span
+                class="linkALike"
+                onclick="userRequest('news', 'sourceID')"
+              >News by Source ( /news/:sourceID )</span></li>
             <li><a href="/sources">All source info ( /sources )</a></li>
             <li><a href="/sources/:sourceID">Source Info by sourceID ( /sources/:sourceID ) TODO!!</a></li>
           </ul>

@@ -14,7 +14,7 @@ const cheerio = require( "cheerio" )
         const html = response.data;
         try {
           const src_articles = source.getArticles(html);
-          console.log("gather articles: ", src_articles.length);
+          console.log( `Articles gathered from ${source.proper} (${source.address}): `, src_articles.length);
           return src_articles;
         } catch (e) {
           console.log(e);

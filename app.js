@@ -28,9 +28,10 @@ global.console.log( '\n****** Finished Loading Sources ******\n' );
 /**
  * Gathers all data from news sources
  */
-async function main () {
+async function loadSources (strSearch) {
   // gather all web request promises 
   NewsCompilation.sources.forEach( source => {
+    source.s
     allPromises.push(
       NewsCompilation.lib.gatherWebData( source )
         .then( articles => articles )
@@ -58,7 +59,6 @@ async function main () {
 }
 
 const NewsCompilation = app.news
-global.NewsCompilation = NewsCompilation
 /**
  * Index page
  */
@@ -169,5 +169,5 @@ app.get( '/api', ( req, res ) => {
 } )
 //#endregion routes
 
-main()
+loadSources()
 module.exports = app;
